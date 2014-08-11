@@ -1,3 +1,6 @@
+/* A program to output 10 lines' Pascal's triangle.
+ * I may improve it to let it output any lines of Pascal's triangle.
+ */
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>

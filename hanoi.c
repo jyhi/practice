@@ -1,3 +1,6 @@
+/* A program to print how Hanoi Tower should be move when "total" disks on it.
+ * Also a practice of recursion.
+ */
 # include <stdio.h>
 
 void move ( int n, char z1, char z2, char z3 );

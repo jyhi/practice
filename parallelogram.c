@@ -1,3 +1,11 @@
+/* A program which print a parallelogram like:
+ *      @@@@@
+ *     @@@@@
+ *    @@@@@
+ *   @@@@@
+ *  @@@@@
+ * Also a simple practice of "for".
+ */
 # include <stdio.h>
 
 int main ( void )

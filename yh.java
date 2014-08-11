@@ -1,3 +1,7 @@
+/* NOTICE: This program is written by Zheng Hui (Tencent QQ: 1406899875),
+ *         another Pascal's triangle.
+ * Copyright (C) Zheng Hui. All rights reserved.
+ */
 public class YanghuiTriangle {
 	public static void main(String[] args){
 		int triangle[][]=new int[8][];
