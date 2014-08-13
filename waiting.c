@@ -58,7 +58,7 @@ void QuickSort ( int l, /* ^HEAD */
             temp = w[i];
             w[i] = w[j];
             w[j] = temp;
-            /* Move poiners */
+            /* Move pointers */
             i++;
             j--;
         }
