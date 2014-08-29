@@ -5,8 +5,8 @@
  *   3/2-1/2
  *
  * NOTICE: This is a problem in NOIP2010 FCF.
- * This is an extreme complicated version, for it traverse every expressions and take numbers out.
- * Actually it can be easier, for using scanf("%d/%d-%d/%d", ...) is okay.
+ * This is an extreme complicated version, for it traverses every expressions and take numbers out.
+ * Actually it can be easier, for using fscanf(fi, "%d/%d-%d/%d", ...) is okay.
  */
 # include <stdio.h>
 # include <stdlib.h>

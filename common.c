@@ -22,11 +22,25 @@ int main ( void )
 
 int lcdiv ( int n, int m, int i )
 {
+    /*
     int tmp = 0;
     for ( tmp = 1; tmp <= n; tmp++ )
         if ( ( n % tmp == 0 ) && ( m % tmp == 0 ) )
             i = tmp;
     return i;
+    */
+    do
+    {
+        if ( n > m )
+            n = n - m;
+        else
+            m = m - n;
+    } while ( ( m != 0 ) && ( n != 0 ) );
+    
+    if ( m == 0 )
+        return n;
+    else
+        return m;
 }
 
 int mcmul ( int n, int m, int j )
