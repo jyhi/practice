@@ -12,24 +12,24 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-void gcd ( unsigned long *output, unsigned long n1, unsigned long n2 );
+void gcd ( long *output, long n1, long n2 );
 
 int main ( void )
 {
-    int           n = 0;          /* First line in *fi */
-    unsigned long common = 0;     /* Largest common divisor */
+    int  n = 0;          /* First line in *fi */
+    long common = 0;     /* Largest common divisor */
     FILE *fi = fopen ( "aminusb.in", "r" ),  /* Input file */
          *fo = fopen ( "aminusb.out", "w" ); /* Output file */
 
     fscanf ( fi, "%d", &n );
 
-    for ( unsigned long tmp = 0, a1 = 0, a2 = 0, /* The 1st fraction: a1 / a2 */
-                                 b1 = 0, b2 = 0, /* The 2nd fraction: b1 / b2 */
-                                 t1 = 0, t2 = 0; /* The sum fraction: t1 / t2 */
-                                 tmp < n; tmp++ )
+    for ( long tmp = 0, a1 = 0, a2 = 0, /* The 1st fraction: a1 / a2 */
+                        b1 = 0, b2 = 0, /* The 2nd fraction: b1 / b2 */
+                        t1 = 0, t2 = 0; /* The sum fraction: t1 / t2 */
+                        tmp < n; tmp++ )
     {
         /* Input */
-        fscanf ( fi, "%lu/%lu-%lu/%lu", &a1, &a2, &b1, &b2 );
+        fscanf ( fi, "%ld/%ld-%ld/%ld", &a1, &a2, &b1, &b2 );
 
         /* Calculate */
         if ( a2 != b2 )
@@ -62,12 +62,12 @@ int main ( void )
         if ( ( t1 != t2 ) && ( t2 != 1 ) )
         {
             if ( t1 != 0 )
-                fprintf ( fo, "%lu/%lu\n", t1, t2 );
+                fprintf ( fo, "%ld/%ld\n", t1, t2 );
             else
                 fprintf ( fo, "0\n" );
         }
         else
-            fprintf ( fo, "%lu\n", t1 );
+            fprintf ( fo, "%ld\n", t1 );
     }
 
     fclose ( fi );
@@ -76,8 +76,13 @@ int main ( void )
     return 0;
 }
 
-void gcd ( unsigned long *output, unsigned long n1, unsigned long n2 )
+void gcd ( long *output, long n1, long n2 )
 {
+    if ( n1 < 0 )
+        n1 = -n1;
+    if ( n2 < 0 )
+        n2 = -n2;
+    
     do
     {
         if ( n1 > n2 )
