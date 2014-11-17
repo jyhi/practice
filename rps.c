@@ -42,31 +42,31 @@ int main ( void )
                 case 0:
                     if ( ( pb[b] == 2 ) || ( pb[b] == 3 ) ) /* A win */
                         sa += 1;
-                    else                                        /* B win */
+                    else                                    /* B win */
                         sb += 1;
                     break;
                 case 1:
                     if ( ( pb[b] == 0 ) || ( pb[b] == 3 ) ) /* A win */
                         sa += 1;
-                    else                                        /* B win */
+                    else                                    /* B win */
                         sb += 1;
                     break;
                 case 2:
                     if ( ( pb[b] == 1 ) || ( pb[b] == 4 ) ) /* A win */
                         sa += 1;
-                    else                                        /* B win */
+                    else                                    /* B win */
                         sb += 1;
                     break;
                 case 3:
                     if ( ( pb[b] == 2 ) || ( pb[b] == 4 ) ) /* A win */
                         sa += 1;
-                    else                                        /* B win */
+                    else                                    /* B win */
                         sb += 1;
                     break;
                 case 4:
                     if ( ( pb[b] == 0 ) || ( pb[b] == 1 ) ) /* A win */
                         sa += 1;
-                    else                                        /* B win */
+                    else                                    /* B win */
                         sb += 1;
                     break;
             } /* switch ( pa[a] ) */
